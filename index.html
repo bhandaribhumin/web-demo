@@ -1,6 +1,11 @@
 <script>
     const queryString = window.location.search;
-    alert('Invite code is -> '+ queryString.replace('?',''));
+    alert('Invite code is -> '+ queryString);
+    const linkParams = queryString.split("&");
+    if(linkParams.length){
+     alert(JSON.stringify(linkParams))
+        linkParams.map((items)=> console.log(items));
+    }
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
     alert('userAgent',navigator.userAgent)
     var device = getMobileOperatingSystem();
